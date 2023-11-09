@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-node bin/brain-games.js
-Welcome to the Brain Games!
+console.log('node bin/brain-games.js');
+console.log('Welcome to the Brain Games!');
