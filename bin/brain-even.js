@@ -1,14 +1,23 @@
 #!/usr/bin/env node
 
-import game from '../src/games/game-even.js';
+import logicGame from '../src/game.js';
 import { getUserName } from '../src/cli.js';
+import { getRandomNumber } from '../src/game.js';
 
-console.log('Welcome to the Brain Games!');
-const userName = getUserName();
-console.log(`Hello, ${userName}!`);
+const RandomNumber = (num) => num % 2 === 0; 
 
-const gameRules = start();
-gameRules.brainGames;
-gameRules.check(brainGames);
-game(gameRules).reset(); 
-  
+export const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+export const getQuestionAnswer = () => {
+    const question = getRandomNumber();
+    const userAnswer = RandomNumber(question)? 'yes' : 'no';
+    return [question, userAnswer];
+};
+
+const startGame = () => {
+    logicGame(rule,getQuestionAnswer);
+};
+
+export default startGame;
+
+startGame();  
