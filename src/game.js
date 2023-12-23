@@ -1,16 +1,10 @@
 import readlineSync from 'readline-sync';
 import { rule } from '../bin/brain-even.js';
-import getRandomNumber from '../src/formula.js';
+import { getRandomNumber } from '../src/formula.js';
 
 const number = (num) => num % 2 === 0;
 
-export const getQuestionAnswer = () => {
-    const question = getRandomNumber();
-    const userAnswer = number(question)? 'yes' : 'no';
-    return [question, userAnswer];
-};
-
-const logicGame = (rule, getQuestionAndAnswer) => {
+const logicGame = () => {
 
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -21,7 +15,8 @@ const logicGame = (rule, getQuestionAndAnswer) => {
   let correctAnswers = 0;
 
   while (correctAnswers < roundCount) {
-    const [question, userAnswer] = getQuestionAndAnswer();
+    const question = getRandomNumber();
+    const userAnswer = number(question)? 'yes' : 'no';
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     
