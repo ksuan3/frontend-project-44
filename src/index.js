@@ -1,35 +1,30 @@
 import readlineSync from 'readline-sync';
-import { rule } from '../bin/brain-even.js';
-import { getRandomNumber } from '../src/formula.js';
 
-const number = (num) => num % 2 === 0;
+const roundCount = 3;
 
-const logicGame = () => {
+const logicGame = (rule, getQuestionAnswer) => {
 
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(rule); 
+  console.log(rule);
 
-  const roundCount = 3;  
   let correctAnswers = 0;
 
   while (correctAnswers < roundCount) {
-    const question = getRandomNumber();
-    const userAnswer = number(question)? 'yes' : 'no';
+    const [question, answerCor] = getQuestionAnswer();
     console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    
-    if (answer === userAnswer) {
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (answerCor === userAnswer) {
       console.log('Correct!');
       correctAnswers += 1;
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${userAnswer}".`);
+      console.log(`"${answerCor}" is wrong answer ;(. Correct answer was "${userAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
 console.log(`Congratulations, ${userName}!`);
-}; 
-
+};
 export default logicGame;
