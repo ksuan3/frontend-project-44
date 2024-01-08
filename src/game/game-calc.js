@@ -21,7 +21,7 @@ let answer;
 return answer;
 };
 
-const getQuestionAnswer = () => {
+const getGame = () => {
 const oper1 = getRandomNumber();
 const oper2 = getRandomNumber();
 const operation = operations[getRandomNumber(0, operations.length)];
@@ -31,7 +31,7 @@ return [question, String(answer)];
 };
 
 const startGameCalc = () => {
- logicGame(rule, getQuestionAnswer);
+ logicGame(rule, getGame);
 };
 
 export default startGameCalc;
