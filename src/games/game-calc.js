@@ -1,24 +1,24 @@
 import logicGame from '../index.js';
-import { getRandomNumber } from '../formula.js';
+import { getRandomNumber } from '../helpers.js';
 
 const rule = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
 const getQuestion = (oper1, oper2, operation) => {
-let answer;
+
  switch (operation) {
   case '+':
-  answer = oper1 + oper2;
+  return oper1 + oper2;
   break;
   case '-':
-  answer = oper1 - oper2;
+  return oper1 - oper2;
   break; 
   case '*':
-  answer = oper1 * oper2;
+  return oper1 * oper2;
   break;
-  default: break;
+  default:
+   throw new Error(`Unknown order state: '${order.state}'!`);
  }
-return answer;
 };
 
 const getGame = () => {
