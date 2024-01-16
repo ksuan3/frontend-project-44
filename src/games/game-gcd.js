@@ -5,13 +5,13 @@ const rule = 'Find the greatest common divisor of given numbers.';
 
 const gameGCD = (num1, num2) => {
   const minNum = num1 > num2 ? num2 : num1;
-  let x = 1;
+  let gcd = 1;
   for (let i = 2; i <= minNum; i += 1) {
     if (num1 % i === 0 && num2 % i === 0){
-     x = i;
+     gcd = i;
    }
   }
-    return x;
+    return gcd;
   }; 
       
 const getGame = () => {

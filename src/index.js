@@ -15,9 +15,8 @@ const logicGame = (rule, getGame) => {
          console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
          console.log(`Let's try again, ${userName}!`);
           return;
-        }else {  
+        }  
           console.log('Correct!');
-        }
     }
 console.log(`Congratulations, ${userName}!`);
 };

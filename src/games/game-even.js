@@ -1,14 +1,14 @@
 import logicGame from '../index.js';
 import { getRandomNumber } from '../helpers.js';
 
-const isNumber = (num) => num % 2 === 0;
+const isEven = (num) => num % 2 === 0;
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getGame = () => {
   const question = getRandomNumber();
-  const answerCor = isNumber(question) ? 'yes' : 'no';
-  return [question, answerCor];
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 const startGame = () => {
