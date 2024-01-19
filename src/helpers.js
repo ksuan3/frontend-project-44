@@ -1,5 +1,2 @@
-const maxNumRand = 100;
-const minNumRand = 0;
-
-export const getRandomNumber = (minNum = minNumRand,
-  maxNum = maxNumRand) => Math.floor(Math.random() * maxNum) + minNum;
+export const getRandomNumber = (minNum = 0,
+  maxNum = 100) => Math.floor(Math.random() * maxNum) + minNum;

@@ -9,15 +9,12 @@ const getQuestion = (oper1, oper2, operation) => {
  switch (operation) {
   case '+':
   return oper1 + oper2;
-  break;
   case '-':
   return oper1 - oper2;
-  break; 
   case '*':
   return oper1 * oper2;
-  break;
   default:
-   throw new Error(`Unknown order state: '${order.state}'!`);
+   throw new Error(`No such action`);
  }
 };
 
