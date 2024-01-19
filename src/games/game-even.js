@@ -1,5 +1,5 @@
 import logicGame from '../index.js';
-import { getRandomNumber } from '../helpers.js';
+import getRandomNumber from '../helpers.js';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -12,7 +12,6 @@ const getGame = () => {
 };
 
 const startGame = () => {
-    logicGame(rule, getGame);
+  logicGame(rule, getGame);
 };
 export default startGame;
-
