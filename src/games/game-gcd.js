@@ -1,4 +1,4 @@
-import logicGame from '../index.js';
+import playGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
@@ -23,7 +23,7 @@ const getGame = () => {
 };
 
 const startGameGCD = () => {
-  logicGame(rule, getGame);
+  playGame(rule, getGame);
 };
 
 export default startGameGCD;

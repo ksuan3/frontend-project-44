@@ -1,4 +1,4 @@
-import logicGame from '../index.js';
+import playGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const rule = 'What number is missing in the progression?';
@@ -20,7 +20,7 @@ const getQuestionAnswer = () => {
 };
 
 const startGameProgression = () => {
-  logicGame(rule, getQuestionAnswer);
+  playGame(rule, getQuestionAnswer);
 };
 
 export default startGameProgression;

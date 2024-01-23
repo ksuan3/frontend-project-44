@@ -1,4 +1,4 @@
-import logicGame from '../index.js';
+import playGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const rule = 'What is the result of the expression?';
@@ -27,7 +27,7 @@ const getGame = () => {
 };
 
 const startGameCalc = () => {
-  logicGame(rule, getGame);
+  playGame(rule, getGame);
 };
 
 export default startGameCalc;

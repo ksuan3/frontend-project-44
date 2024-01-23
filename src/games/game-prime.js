@@ -1,4 +1,4 @@
-import logicGame from '../index.js';
+import playGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -22,7 +22,7 @@ const getQuestionAnswer = () => {
 };
 
 const startGamePrime = () => {
-  logicGame(rule, getQuestionAnswer);
+  playGame(rule, getQuestionAnswer);
 };
 
 export default startGamePrime;
